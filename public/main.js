@@ -1,6 +1,6 @@
 const form = document.getElementById('vote-form');
 
-
+// Form submit event
 form.addEventListener('submit', (e) => {
   const choice = document.querySelector('input[name=os]:checked').value;
   const data = {os: choice};
@@ -17,3 +17,29 @@ form.addEventListener('submit', (e) => {
 
   e.preventDefault();
 });
+
+let dataPoints = [
+  { label: 'Windows', y: 0 },
+  { label: 'MacOs', y: 0 },
+  { label: 'Linux', y: 0 },
+  { label: 'Other', y: 0 },
+];
+
+const chartContainer = document.querySelector('#chartContainer');
+
+if(chartContainer) {
+  const chart = new CanvasJS.Chart('chartContainer', {
+    animationEnabled: true,
+    theme: 'theme1',
+    title: {
+      text: 'OS Results'
+    },
+    data: [
+      {
+        type: 'column',
+        dataPoints: dataPoints
+      }
+    ]
+  });
+  chart.render();
+}
