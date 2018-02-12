@@ -3,8 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Pusher Poll</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   </head>
   <body>
-  <h1>OS Vote</h1>
+    <div class="container">
+      <h1>OS Vote</h1>
+      <p>Vote for your favorite OS to develop on</p>
+      <form id="vote-form">
+        <p>
+          <input type="radio" name="os" id="windows" value="Windows">
+          <label for="windows">Windows</label>
+        </p>
+        <p>
+          <input type="radio" name="os" id="macos" value="Macos">
+          <label for="macos">Macos</label>
+        </p>
+        <p>
+          <input type="radio" name="os" id="linux" value="Linux Distro">
+          <label for="linux">Linux Distro</label>
+        </p>
+        <p>
+          <input type="radio" name="os" id="other" value="Other">
+          <label for="other">Other</label>
+        </p>
+        <input type="submit" value="Vote" class="btn">
+      </form>
+    </div>
+
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   </body>
 </html>
