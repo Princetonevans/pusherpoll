@@ -23,4 +23,5 @@ router.post('/', (req, res) => {
 
   return res.json({ success: true, message: 'Thank you for voting' })
 });
+
 module.exports = router;
